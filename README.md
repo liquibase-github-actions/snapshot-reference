@@ -13,37 +13,37 @@ steps:
     # Required
     referenceUrl: ""
 
-    # The JDBC driver class
-    # string
-    # Optional
-    driver: ""
-
-    # The JDBC driver properties file
-    # string
-    # Optional
-    driverPropertiesFile: ""
-
-    # The default catalog name to use for the database connection
+    # The default catalog name to use for the reference database connection
     # string
     # Optional
     referenceDefaultCatalogName: ""
 
-    # The default schema name to use for the database connection
+    # The default schema name to use for the reference database connection
     # string
     # Optional
     referenceDefaultSchemaName: ""
 
-    # Reference password to use to connect to the database
+    # The JDBC driver class for the reference database
+    # string
+    # Optional
+    referenceDriver: ""
+
+    # The JDBC driver properties file for the reference database
+    # string
+    # Optional
+    referenceDriverPropertiesFile: ""
+
+    # The reference database password
     # string
     # Optional
     referencePassword: ""
 
-    # Reference username to use to connect to the database
+    # The reference database username
     # string
     # Optional
     referenceUsername: ""
 
-    # Output format to use (JSON or YAML
+    # Output format to use (JSON or YAML)
     # string
     # Optional
     snapshotFormat: ""
