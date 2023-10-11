@@ -18,11 +18,13 @@ message SnapshotReferenceRequest {
   optional string reference_default_schema_name = 2; // The default schema name to use for the reference database connection
   optional string reference_driver = 3; // The JDBC driver class for the reference database
   optional string reference_driver_properties_file = 4; // The JDBC driver properties file for the reference database
-  optional string reference_password = 5; // The reference database password
-  string reference_url = 6; // *required* The JDBC reference database connection URL
-  optional string reference_username = 7; // The reference database username
-  optional string snapshot_format = 8; // Output format to use (JSON or YAML)
-  liquibase.GlobalOptions global_options = 9;
+  optional string reference_liquibase_catalog_name = 5; // Reference catalog to use for Liquibase objects
+  optional string reference_liquibase_schema_name = 6; // Reference schema to use for Liquibase objects
+  optional string reference_password = 7; // The reference database password
+  string reference_url = 8; // *required* The JDBC reference database connection URL
+  optional string reference_username = 9; // The reference database username
+  optional string snapshot_format = 10; // Output format to use (JSON or YAML)
+  liquibase.GlobalOptions global_options = 11;
 }
 
 message Response {
