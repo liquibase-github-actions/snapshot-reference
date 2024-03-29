@@ -6,7 +6,7 @@ Capture the current state of the reference database
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/snapshot-reference@v4.26.0
+- uses: liquibase-github-actions/snapshot-reference@v4.27.0
   with:
     # The JDBC reference database connection URL
     # string
@@ -53,6 +53,11 @@ steps:
     # Optional
     referenceUsername: ""
 
+    # [PRO] Types of objects to snapshot: Catalog, CheckConstraint, Column, DatabasePackage, DatabasePackageBody, ForeignKey, Function, Index, PrimaryKey, Schema, Sequence, StoredProcedure, Synonym, Table, Trigger, UniqueConstraint, View
+    # string
+    # Optional
+    snapshotFilters: ""
+
     # Output format to use (JSON or YAML)
     # string
     # Optional
@@ -70,7 +75,7 @@ The liquibase snapshot reference action accepts all valid liquibase global optio
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/snapshot-reference@v4.26.0
+  - uses: liquibase-github-actions/snapshot-reference@v4.27.0
     with:
       referenceUrl: ""
       headless: true

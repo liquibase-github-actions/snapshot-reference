@@ -23,8 +23,9 @@ message SnapshotReferenceRequest {
   optional string reference_password = 7; // The reference database password
   string reference_url = 8; // *required* The JDBC reference database connection URL
   optional string reference_username = 9; // The reference database username
-  optional string snapshot_format = 10; // Output format to use (JSON or YAML)
-  liquibase.GlobalOptions global_options = 11;
+  optional string snapshot_filters = 10; // [PRO] Types of objects to snapshot: Catalog, CheckConstraint, Column, DatabasePackage, DatabasePackageBody, ForeignKey, Function, Index, PrimaryKey, Schema, Sequence, StoredProcedure, Synonym, Table, Trigger, UniqueConstraint, View
+  optional string snapshot_format = 11; // Output format to use (JSON or YAML)
+  liquibase.GlobalOptions global_options = 12;
 }
 
 message Response {
