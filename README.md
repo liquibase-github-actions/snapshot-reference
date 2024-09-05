@@ -6,7 +6,7 @@ Capture the current state of the reference database
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/snapshot-reference@v4.29.1
+- uses: liquibase-github-actions/snapshot-reference@v4.29.2
   with:
     # The JDBC reference database connection URL
     # string
@@ -75,7 +75,7 @@ The liquibase snapshot reference action accepts all valid liquibase global optio
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/snapshot-reference@v4.29.1
+  - uses: liquibase-github-actions/snapshot-reference@v4.29.2
     with:
       referenceUrl: ""
       headless: true
